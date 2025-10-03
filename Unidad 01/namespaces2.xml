@@ -4,8 +4,4 @@
         <book:titulo>Aprendiendo XML</book:titulo>
         <book:autor>Ana Pérez</book:autor>
     </book:libro>
-    <disc:vinilo>
-        <disc:titulo>Greatest Hits II</disc:titulo>
-        <disc:autor>Queen</disc:autor>
-    </disc:vinilo>
 </catalogo>

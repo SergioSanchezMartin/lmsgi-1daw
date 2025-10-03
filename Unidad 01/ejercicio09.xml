@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Etiqueta raiz -->
+ <catalogo xmlns:dc="http://purl.org/dc/elements/1.1">
+    <libro>
+        <dc:title>El Principito</dc:title>
+        <dc:creator>Antoine Saint Exupery</dc:creator>
+        <fecha>1947</fecha>
+    </libro>
+    <libro>
+        <dc:title>Juego de Tronos: viento de invierno</dc:title>
+        <dc:creator>George R. Martin</dc:creator>
+        <fecha>2001</fecha>
+    </libro>
+ </catalogo>
