@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE banco SYSTEM "banco.dtd">
+
+<banco>
+    <!-- Sucursal 1 -->
+    <sucursal id="S001">
+        <!-- Cuenta 1 de la sucursal 1-->
+        <cuenta iban="C001S1">
+            <cliente dni="4375683475T">
+                <nombre>Álvaro Frutos</nombre>
+                <telefono>1234566778</telefono>
+            </cliente>
+            <cliente dni="5465465R">
+                <nombre>Alba Agüera</nombre>
+                <telefono>7589347589</telefono>
+            </cliente>
+        </cuenta>
+        
+        <!-- Cuenta 2 de la sucursal 1 -->
+        <cuenta iban="C002S1">
+            <cliente dni="56546Y">
+                <nombre>Sergio Sánchez</nombre>
+                <telefono>85794</telefono>
+            </cliente>
+        </cuenta>
+    </sucursal>
+    
+    <!-- Sucursal 2 -->
+    <sucursal id="S002">
+        <!-- Cuenta 1 de la sucursal 2 -->
+        <cuenta iban="C001S2">
+            <cliente dni="48w9759483">
+                <nombre>Pepe</nombre>
+                <telefono>438579345</telefono>
+            </cliente>
+        </cuenta>
+    </sucursal>
+</banco>

@@ -1,0 +1,10 @@
+<!ELEMENT banco (sucursal+)>
+<!ELEMENT sucursal (cuenta+)>
+<!-- ATTLIST nom_etiqueta nom_atributo type opcion-->
+<!ATTLIST sucursal id NMTOKEN #REQUIRED>
+<!ELEMENT cuenta (cliente+)>
+<!ATTLIST cuenta iban NMTOKEN #REQUIRED>
+<!ELEMENT cliente (nombre,telefono)>
+<!ATTLIST cliente dni NMTOKEN #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
