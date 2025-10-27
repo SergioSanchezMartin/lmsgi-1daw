@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE inventario SYSTEM "ejercicio3.dtd">
+<inventario>
+    <item sku="001" moneda="EUR">
+        <nombre>Mesa</nombre>
+        <precio>20</precio>
+        <stock>6</stock>
+    </item>
+    <item sku="002" moneda="USD">
+        <nombre>Table</nombre>
+        <precio>50</precio>
+        <stock>2</stock>
+    </item>
+</inventario>

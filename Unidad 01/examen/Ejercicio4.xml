@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<obra xmlns:cat="http://ejemplo.org/catalogo"
+      xmlns:meta="http://ejemplo.org/metadatos">
+    <cat:libro>
+        <cat:titulo>El Quijote</cat:titulo>
+        <cat:autor>Cervantes</cat:autor>
+    </cat:libro>
+    <meta:ficha>
+        <meta:titulo>El Quijote</meta:titulo>
+        <meta:anio>1625</meta:anio>
+    </meta:ficha>
+</obra>
