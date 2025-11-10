@@ -190,3 +190,59 @@ body {
     background: #38707e;
     font-size: 14px;
 }
+
+
+/* ========================
+   SECCION TIENDA
+   ========================
+*/
+
+.tarjeta.tienda {
+    width: min(1500px, 95%);
+}
+
+/* Contenedor de las cards */
+.lista-cards--flex {
+    display: flex;              /*Activa el modelo Flex */
+    flex-wrap: wrap;            /* Permite que las cards salten de línea si no cabeb */
+    gap: 16px;                  /* Espacio uniforme entre las cards */
+    justify-content: center;    /* Centra horizontalmente todas las cards */
+}
+
+/* Card individual */
+.card {
+    width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+
+/* Imagen dentro de la card */
+.card-imagen {
+    width: 100%;            /* Ocupa todo el ancho disponible dentro de la card */
+    height: 180px;          /* Altura fija para todas las imágenes */
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    object-fit: contain;
+}
+
+/* Textos */
+.card-titulo {
+    color: #333;
+    font-size: 1.1rem;
+    margin: 8px 0 4px;
+}
+
+.card-descripcion {
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 3.5em;  /* Mantiene altura uniforme aunque cambie el texto */
+}
+
+.card-precio {
+    
+}
