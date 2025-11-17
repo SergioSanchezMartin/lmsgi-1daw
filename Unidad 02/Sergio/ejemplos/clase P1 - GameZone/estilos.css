@@ -244,5 +244,77 @@ body {
 }
 
 .card-precio {
-    
+    color: #b60000;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.card-boton {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #2C3E50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* display: inline-block:
+    Por defecto, los enlaces <a> son elementos en lína y no aceptan padding vertical real ni border radius bien definidos. 
+    Con inline-block permito que se comporte como un botón real con padding, bordes redondeados y ancho ajustado al texto. */
+
+
+/* ========================
+   PRACTICA GRID
+   ========================
+*/
+
+.contenedor-grid > :nth-child(1) { background-color: aquamarine;}
+.contenedor-grid > :nth-child(2) { background-color: #e74c3c;}
+.contenedor-grid > :nth-child(3) { background-color: greenyellow ;}
+.contenedor-grid > :nth-child(4) { background-color: purple;}
+.contenedor-grid > :nth-child(5) { background-color: goldenrod;}
+.contenedor-grid > :nth-child(6) { background-color: blue;}
+
+
+.contenedor-grid {
+    display: grid;      /* Activamos grid */
+    /* row-gap: 5px;
+    column-gap: 25px; */
+    /* gap: 5px 25px; */
+     /* espacio uniforme entre filas y columnas */
+    /* gap: 10px; */
+    /* 3 columnas exactas */
+    /* grid-template-columns: repeat(3,200px); */
+     /* 2 filas exactas */      
+    /* grid-template-rows: 100px 100px;                */
+    background-color: #eaeaea;
+    padding: 10px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 75px 125px;
+    gap: 20px;
+    min-height: 300px; 
+
+    /* Alineación de los elementos dentro de cada celda */
+    justify-items: stretch;
+    align-items: stretch;
+    /* Atajo: place-items = align-items + justify-items */
+    /* place-items: start center; */
+
+    /* Alineación de la cuadrícula respecto del contenedor grid */
+    /* justify-content: center;
+    align-content: center; */
+    /* Atajo: place-content = align-content + justify-content */
+    place-content: center;
+}
+
+.item-1 {
+    /* Alineación del elemento dentro de su celda */
+    /* justify-self: center;
+    align-self: center; */
+    place-self: center;
+    order: 1;
+}
+
+.item-3 {
+    order: -4;
 }
