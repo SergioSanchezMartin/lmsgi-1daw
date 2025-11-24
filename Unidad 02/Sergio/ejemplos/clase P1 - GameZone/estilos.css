@@ -211,7 +211,7 @@ body {
 
 /* Card individual */
 .card {
-    width: 280px;
+    width: 100%;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -289,7 +289,7 @@ body {
     /* grid-template-rows: 100px 100px;                */
     background-color: #eaeaea;
     padding: 10px;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3, 200px);
     grid-template-rows: 75px 125px;
     gap: 20px;
     min-height: 300px; 
@@ -317,4 +317,124 @@ body {
 
 .item-3 {
     order: -4;
+}
+
+/* SECCION TIENDA GRID */
+.lista-cards--grid-fill {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    /*
+    - minmax(280px, 1fr):
+        Cada card mide como mínimo 280px de ancho,
+        pero puede crecer hasta ocupar una fracción del espacio (1fr).
+    - auto-fill:
+        Intenta "rellenar" la fila con tantas columnas como quepan.
+        Si sobran huecos, los reserva (aunque queden vacíos).
+    - auto-fill vs auto-fit:
+        auto-fill: intenta llenar filas con columnas, incluso reservando huecos.
+        auto-fit: colapsa huecos y deja que las cards se ensanchen.
+  */
+    gap: 16px;
+}
+.lista-cards--grid-fit {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /*
+    - minmax(280px, 1fr):
+        Cada card mide como mínimo 280px de ancho,
+        pero puede crecer hasta ocupar una fracción del espacio (1fr).
+    - auto-fill:
+        Intenta "rellenar" la fila con tantas columnas como quepan.
+        Si sobran huecos, los reserva (aunque queden vacíos).
+    - auto-fill vs auto-fit:
+        auto-fill: intenta llenar filas con columnas, incluso reservando huecos.
+        auto-fit: colapsa huecos y deja que las cards se ensanchen.
+  */
+    gap: 16px;
+}
+
+/* GRID POR ÁREAS */
+.contenedor-areas {
+    display: grid;
+    min-height: 400px;
+    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-rows: 80px 1fr 60px;
+    gap: 16px;
+    grid-template-areas: 
+        "cabecera   cabecera    cabecera"
+        "menu       principal   ads"
+        "pie        pie         pie";
+}
+
+.area-header {
+    grid-area: cabecera; background-color: #e74c3c;
+}
+
+.area-menu {
+    grid-area: menu; background-color: greenyellow;
+}
+
+.area-main {
+    grid-area: principal;
+    background-color: aquamarine;
+}
+
+.area-aside {
+    grid-area: ads;
+    background-color: plum;
+}
+
+.area-footer {
+    grid-area: pie;
+    background-color: burlywood;
+}
+
+/* ========================
+   SECCION JUEGOS
+   ========================
+*/
+
+.tarjeta.juegos {
+    width: min(1700px, 95%);
+}
+
+/* Catálogo de juegos enfoque ESCRITORIO FIRST */
+.lista-cards--grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card-destacada {
+    /* grid-column: span 2; */
+    background-color: #82d2e5;
+    border: 2px solid red;
+}
+
+/* VERSION MOVILES */
+/* @media (width < 768px ) {}*/
+@media screen and (width < 768px){
+    .tienda.juegos {
+        width: 95%;
+    }
+
+    /* Una sola columna de juegos */
+    .lista-cards--grid {
+        grid-template-columns: minmax(220px, 1fr);
+    }
+}
+
+/* VERSION TABLET */
+/* @media (768px <= width < 1024px) {}*/
+@media screen and (768px <= width < 1024px){
+    .tienda.juegos {
+        width: min(1000px, 95%);
+    }
+
+    /* Una sola columna de juegos */
+    .lista-cards--grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
 }
