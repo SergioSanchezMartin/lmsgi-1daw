@@ -198,6 +198,35 @@ body {
     font-size: 14px;
 }
 
+/* ==================
+   SECCION CONTACTO
+   ==================
+*/
+
+.contacto-ubicacion {
+    margin-top: 2rem;
+    /* height: 1000px; */
+}
+
+.mapa-contenedor {
+    margin-top: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    /* Esto equivale a */
+        /* margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto; */
+}
+
+.mapa-contenedor iframe {
+    width: 100%;
+    height: 350px;
+    /* aspect-ratio: 16 / 9; */
+    border: 0;
+    border-radius: 8px;    
+}
+
 
 /* ========================
    SECCION TIENDA
