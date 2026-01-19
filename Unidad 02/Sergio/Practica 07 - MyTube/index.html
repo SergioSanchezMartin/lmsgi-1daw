@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MyTube</title>
+  <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- CABECERA SIEMPRE ARRIBA -->
+  <header class="site-header">
+    <div class="header-left">
+      <img src="imagenes/youtube.svg" alt="Logo MyTube" class="logo-img">
+      <h1>MyTube</h1>
+    </div>
+
+    <form class="header-right" action="#" method="get">
+      <input type="search" name="q" class="search-input"
+             placeholder="Buscar…" aria-label="Buscar vídeos">
+      <button type="submit" class="search-button" aria-label="Buscar">
+        <img src="imagenes/search.svg" alt="Buscar" class="search-icon">
+      </button>
+    </form>
+  </header>
+
+  <!-- MAIN OCUPA EL ESPACIO INTERMEDIO -->
+  <main class="main-content">
+    <div class="main-container">
+      <!-- MENÚ LATERAL (20%) -->
+      <nav class="sidebar" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="imagenes/home.svg" alt="" class="nav-icon">
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="imagenes/trending-up.svg" alt="" class="nav-icon">
+              <span>Tendencias</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="imagenes/dollar-sign.svg" alt="" class="nav-icon">
+              <span>Suscripciones</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="imagenes/book.svg" alt="" class="nav-icon">
+              <span>Biblioteca</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="imagenes/thumbs-up.svg" alt="" class="nav-icon">
+              <span>Vídeos que me gustan</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- CONTENIDO PRINCIPAL (80%) -->
+      <section class="content-area">
+        <!-- VÍDEOS -->
+        <section class="videos">
+          <div class="video-card">
+            <h2>Reproducción de vídeo local</h2>
+            <video src="video/LinusTorvaldsNvidia.mp4"
+                   controls
+                   poster="imagenes/poster.jpg">
+              Tu navegador no soporta el elemento <code>video</code>.
+            </video>
+            <p>Linus Torvalds haciendo amigos</p>
+          </div>
+
+          <div class="video-card">
+            <h2>Reproducción de vídeo en Streaming</h2>
+            <video src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+                   controls
+                   autoplay
+                   muted>
+              Tu navegador no soporta el elemento <code>video</code>.
+            </video>
+            <p>Vídeo en Streaming que se reproduce automáticamente</p>
+          </div>
+
+          <div class="video-card">
+            <h2>Vídeo de Youtube</h2>
+            <iframe
+              src="https://www.youtube.com/embed/Q123YDN4tKE"
+              title="El podcast de Mariano en Aquí no hay quien viva"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+            <p>El podcast de Mariano en Aquí no hay quien viva</p>
+          </div>
+        </section>
+
+        <!-- AUDIOS -->
+        <section class="audios">
+          <div class="audio-card">
+            <h2>Reproducción de audio local</h2>
+            <audio src="audio/Ramones - Spider-Man.mp3" controls>
+              Tu navegador no soporta el elemento <code>audio</code>.
+            </audio>
+            <p>Ramones – Spider-Man</p>
+          </div>
+
+          <div class="audio-card">
+            <h2>Reproducción de audio en Streaming</h2>
+            <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" controls>
+              Tu navegador no soporta el elemento <code>audio</code>.
+            </audio>
+            <p>Audio en Streaming - SoundHelix-Song-1</p>
+          </div>
+
+          <div class="audio-card">
+            <h2>
+              Reproducción de audio en Streaming - Radio Paradise
+              (una emisora que ofrece una mezcla de rock, pop y otros géneros)
+            </h2>
+            <audio src="http://stream.radioparadise.com/mp3-192" controls>
+              Tu navegador no soporta el elemento <code>audio</code>.
+            </audio>
+            <p>Radio Paradise</p>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <!-- PIE SIEMPRE ABAJO -->
+  <footer class="site-footer">
+    <p>© 2024 MyTube. Todos los derechos reservados.</p>
+    <p class="footer-links">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+      <a href="#">Contacto</a>
+    </p>
+  </footer>
+</body>
+</html>

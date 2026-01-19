@@ -16,12 +16,33 @@ Configuración general:
 */
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", sans-serif;
+    /*
+      - "Roboto": fuente que hemos traído de Google Fonts
+      - system-ui, -apple-system, etc.: fuentes de sistema de respaldo
+      - sans-serif: último recurso genérico
+    */
+
     color: #333;
     background: #f0f0f0;
     display: flex;              /* Contenedor flexible */
     flex-direction: column;     /* Disposición vertical de los 3 elementos */
     min-height: 100vh;          /* Altura total del viewport*/
+}
+
+/* Títulos con aire futurista/gamer */
+h1, h2 {
+    font-family: "Orbitron", "Roboto", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* separa un poco las letras, estilo arcade/futurista */
+}
+
+/* H3 puede ser más discreto pero manteniendo jerarquía */
+h3 {
+    font-family: "Roboto", system-ui, sans-serif;
+    font-weight: 700;
 }
 
 /* Cabecera con FLEX */
@@ -54,6 +75,8 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-family: "Orbitron", "Roboto", sans-serif;
+    letter-spacing: 0.5px;
 }
 
 /* Enlace activo del menú (página actual) */
@@ -184,7 +207,12 @@ body {
     border-radius: 4px;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    font: inherit;
 }
+
+/* .botones input[type="submit"] {
+    background-color: green;
+} */
 
 .form-row button:hover {
     background-color: darkred;
@@ -205,26 +233,23 @@ body {
 
 .contacto-ubicacion {
     margin-top: 2rem;
-    /* height: 1000px; */
 }
 
 .mapa-contenedor {
     margin-top: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
-    /* Esto equivale a */
-        /* margin-top: auto;
-        margin-bottom: auto;
-        margin-left: auto;
-        margin-right: auto; */
 }
 
 .mapa-contenedor iframe {
     width: 100%;
-    height: 350px;
-    /* aspect-ratio: 16 / 9; */
+    max-width: 600px;
+    /* height: 350px; */
+    aspect-ratio: 16 / 9;
     border: 0;
-    border-radius: 8px;    
+    border-radius: 8px;
+
+    /* Centramos el mapa horizontalmente */
+    display: block;
+    margin: 0 auto;    
 }
 
 
@@ -295,7 +320,7 @@ body {
 }
 
 /* display: inline-block:
-    Por defecto, los enlaces <a> son elementos en lína y no aceptan padding vertical real ni border radius bien definidos. 
+    Por defecto, los enlaces <a> son elementos en línea y no aceptan padding vertical real ni border radius bien definidos. 
     Con inline-block permito que se comporte como un botón real con padding, bordes redondeados y ancho ajustado al texto. */
 
 
@@ -481,6 +506,42 @@ body {
     border-radius: 8px;
 }
 
+/* Contenedor principal: menú lteral + contenido en fila */
+.layout-guias .layout-guias-contenido {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+/* Menú lateral */
+.layout-guias .navega-lateral {
+    background-color: #2C3E50;
+    padding: 1rem 0.5rem;
+    min-width: 220px;
+}
+
+/* Menú en columna solo en la página de Guías */
+.layout-guias .navega-lateral .menu {
+    flex-direction: column;
+}
+
+/* Enlaces del menú lateral ocupan todo el ancho */
+.layout-guias .navega-lateral .menu a {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+.layout-guias .navega-lateral .menu a:hover {
+    background: #0a1a2a;
+    color: #E74C3C;
+}
+
+/* El main se expande para ocupar el resto del espacio */
+.layout-guias #contenido-principal {
+    flex: 1;
+    padding: 1.5rem;
+}
 
 /* VERSION MOVILES */
 /* @media (width < 768px ) {}*/

@@ -1,96 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portal de videojuegos">
-    <link rel="stylesheet" href="../estilos.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portal de videojuegos" />
+    <link rel="stylesheet" href="../estilos.css" />
+    <!-- Preconexión a los servidores de Google Fonts (mejora rendimiento) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Importar fuentes: Orbitron (títulos gamer) y Roboto (texto) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>GameZone - Tu portal de videojuegos</title>
-</head>
-<body class="layout-guias">
+  </head>
+  <body class="layout-guias">
     <header class="cabecera">
-        <div class="brand">
-            <img src="../imagenes/gamezone-logo.png" alt="Logo de GameZone" class="logo">
-        </div>
-        <nav class="navegacion">
-            <ul class="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="#">Noticias</a></li>
-                <li><a href="guias.html" class="activo">Guías</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="registro.html">Registro</a></li>
-                <li><a href="tienda.html">Tienda</a></li>
-                <li><a href="juegos.html">Juegos</a></li>
-            </ul>
-        </nav>
+      <div class="brand">
+        <img
+          src="../imagenes/gamezone-logo.png"
+          alt="Logo de GameZone"
+          class="logo"
+        />
+      </div>
     </header>
 
     <div class="layout-guias-contenido">
-        <!-- Aquí luego añadiremos menú lateral + contenido -->
-        <main id="contenido-principal" class="guias">
-            <h1>Guías y tutoriales</h1>
-            <p>Aquí encontrarás una selección de vídeos con guías, trucos y tutoriales</p>
+      <!-- Aquí menú lateral-->
+       <nav class="navegacion navega-lateral">
+        <ul class="menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="#">Noticias</a></li>
+          <li><a href="guias.html" class="activo">Guías</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="juegos.html">Juegos</a></li>
+        </ul>
+      </nav>
 
-            <section class="guias-videos">
-                <h2>Vídeos destacados</h2>
+      <!-- Aquí el contenido principal -->
+      <main id="contenido-principal" class="guias">
+        <h1>Guías y tutoriales</h1>
+        <p>
+          Aquí encontrarás una selección de vídeos con guías, trucos y
+          tutoriales
+        </p>
 
-                <!-- Contenedor grid de vídeos -->
-                <div class="guias-grid">
-                    <!-- Vídeo(ítem) 1 -->
-                    <article class="guia-video">
-                        <h3>Guía 1: God of War</h3>
-                        <iframe 
-                            src="https://www.youtube.com/embed/LFeLNRLQh0c"
-                            title="Guía 1: God of War"
-                            loading="lazy"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen>
-                        </iframe>
-                    </article>
+        <section class="tarjeta guias-videos">
+          <h2>Vídeos destacados</h2>
 
-                    <!-- Vídeo(ítem) 2 -->
-                    <article class="guia-video">
-                        <h3>Guía 2: Fortnite</h3>
-                        <iframe 
-                            src="https://www.youtube.com/embed/sw0WfaWYwa8"
-                            title="Guía 2: Fortnite"
-                            loading="lazy"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen>
-                        </iframe>
-                    </article>
+          <!-- Contenedor grid de vídeos -->
+          <div class="guias-grid">
+            <!-- Vídeo(ítem) 1 -->
+            <article class="guia-video">
+              <h3>Guía 1: God of War</h3>
+              <iframe
+                src="https://www.youtube.com/embed/LFeLNRLQh0c"
+                title="Guía 1: God of War"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </article>
 
-                    <!-- Vídeo(ítem) 3 -->
-                    <article class="guia-video">
-                        <h3>Guía 3: Mario Kart</h3>
-                        <iframe 
-                            src="https://www.youtube.com/embed/jXSsuyf6mKY"
-                            title="Guía 3: Mario kart"
-                            loading="lazy"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen>
-                        </iframe>
-                    </article>
+            <!-- Vídeo(ítem) 2 -->
+            <article class="guia-video">
+              <h3>Guía 2: Fortnite</h3>
+              <iframe
+                src="https://www.youtube.com/embed/sw0WfaWYwa8"
+                title="Guía 2: Fortnite"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </article>
 
-                    <!-- Vídeo(ítem) 4 -->
-                    <article class="guia-video">
-                        <h3>Guía 4: Counter Strike</h3>
-                        <iframe 
-                            src="https://www.youtube.com/embed/BlgCbcGlYLU"
-                            title="Guía 4: Counter Strike"
-                            loading="lazy"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen>
-                        </iframe>
-                    </article>
-                </div>
-            </section>
-        </main>
+            <!-- Vídeo(ítem) 3 -->
+            <article class="guia-video">
+              <h3>Guía 3: Mario Kart</h3>
+              <iframe
+                src="https://www.youtube.com/embed/jXSsuyf6mKY"
+                title="Guía 3: Mario kart"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </article>
+
+            <!-- Vídeo(ítem) 4 -->
+            <article class="guia-video">
+              <h3>Guía 4: Counter Strike</h3>
+              <iframe
+                src="https://www.youtube.com/embed/BlgCbcGlYLU"
+                title="Guía 4: Counter Strike"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </article>
+          </div>
+        </section>
+      </main>
     </div>
-    
 
     <footer class="pie">
-        <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
+      <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
     </footer>
-</body>
+  </body>
 </html>
