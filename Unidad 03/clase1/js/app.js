@@ -157,6 +157,33 @@ console.log(etiquetaProducto({nombre: "Ratón", precio: 12.99}));
 
 // Crear un array de 3 objetos productos (nombre/precio) 
 // y una función que devuelva el precio total sumado 
-// (aquí puedes hacerlo simple: sumar 3 elementos a mano, sin bucles si no quieres entrar).
+// (aquí puedes hacerlo simple: sumar 3 elementos a mano, sin bucles).
+const cesta = [
+    {nombre: "Teclado", precio: 19.99}, 
+    {nombre: "Ratón", precio: 12.95}, 
+    {nombre: "Auriculares", precio: 50}
+];
 
+const sumaCesta = function (){
+    // Cuerpo de la función
+    return cesta[0].precio + cesta[1].precio + cesta[2].precio;
+};
+console.log(`Total compra = ${sumaCesta()}€`);
 
+// Opción 2: pasando los objetos por parámetro
+const sumaCesta2 = function (obj1, obj2, obj3){
+    // Cuerpo de la función
+    return obj1.precio + obj2.precio + obj3.precio;
+};
+console.log(`Total compra (sumaCesta2)= ${sumaCesta2(cesta[0], cesta[1], cesta[2])}€`);
+
+// Opción 3: pasando los precios de los objetos por parámetro
+const sumaCesta3 = function (precio1, precio2, precio3) {
+    return precio1 + precio2 + precio3;
+}
+
+console.log(`Total compra (sumaCesta3)= ${sumaCesta3(cesta[0].precio, cesta[1].precio, cesta[2].precio)}€`);
+
+// Opción 4: igual que 2 pero con función flecha
+const sumaCesta4 = (obj1, obj2, obj3) => obj1.precio + obj2.precio + obj3.precio;
+console.log(`Total compra (sumaCesta4)= ${sumaCesta4(cesta[0], cesta[1], cesta[2])}€`);
