@@ -33,3 +33,15 @@ console.log(seccion.isConnected);       //true porque ya está insertada
 // Si quisiera clonar el elemento seccion
 const copiaSeccion = seccion.cloneNode();
 const copiaProfunda = seccion.cloneNode(true);
+
+// Mini reto:
+const div = document.querySelector(".container");
+const parrafo = document.createElement("p");
+parrafo.innerHTML = `Este es el primer párrafo`;
+const articulo = document.createElement("article");
+const negrita = document.createElement("strong");
+negrita.textContent = `Este es el texto que aparecerá en negrita y en verde`;
+div.appendChild(parrafo);
+div.appendChild(articulo);
+articulo.appendChild(negrita);
+negrita.className = "green";
