@@ -45,3 +45,16 @@ div.appendChild(parrafo);
 div.appendChild(articulo);
 articulo.appendChild(negrita);
 negrita.className = "green";
+
+
+// Eventos
+// Mediante atributo HTML:
+function cambiarTexto(){
+    const p = document.getElementById("salida");
+    p.textContent = "Salida: ¡Hola Mundo!";
+}
+
+
+// Manejador de eventos
+const btn = document.querySelector(".btn");
+btn.addEventListener("click", cambiarTexto);
