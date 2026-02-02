@@ -27,18 +27,17 @@ const nombre = "Sergio";
 // });
 
 // Formas de pasar la función a addEventListener
+const boton = document.getElementById("btn");
+const texto = document.querySelector(".salida");
+function saludar() {
+    texto.textContent = `Salida: Hola ${nombre}`;
+}
 // A) Función definida aparte y pasar referencia (la “clásica”)
-// const boton = document.getElementById("btn");
-// const texto = document.querySelector(".salida");
-
-// function saludar() {
-//     texto.textContent = `Salida: Hola ${nombre}`;
-// }
-
 // boton.addEventListener("click", saludar);
 
+
 // B) El error típico: poner () (se ejecuta al cargar, no al click)
-// boton.addEventListener("click", saludar());  //❌ MAL
+// boton.addEventListener("click", saludar());     //❌ MAL
 // boton.addEventListener("click", saludar);    //✅ BIEN
 
 // C) Función anónima (muy común)
@@ -61,3 +60,48 @@ const nombre = "Sergio";
 // boton.addEventListener("click", function () {
 //     suma(7,8);
 // });
+
+// Otros tipos de eventos: input
+const txt = document.getElementById("txt");
+const salida = document.getElementsByClassName("salida");
+
+txt.addEventListener("input", () => {
+  salida[0].textContent = `Salida: escribiendo ${txt.value}`;
+});
+
+// Mini-reto (nivel medio): contador de clicks + botón reset
+// Reglas:
+// ❌ No usar onclick en HTML
+// ❌ No usar setAttribute('onclick', ...)
+// ✅ Usar addEventListener
+
+// En cada click mostrar: "Salida: has hecho X click(s)"
+// En reset: poner contador a 0 y mostrar "Salida: contador a 0".
+
+// const btn = document.getElementById("btn");
+// const btnReset = document.getElementById("btnReset");
+// salida = document.getElementById("salida");
+
+// let contador = 0;
+
+// btn.addEventListener("click", () => {
+//   contador++;
+//   salida.textContent = `Salida: has hecho ${contador} click(s)`;
+// });
+
+// btnReset.addEventListener("click", () => {
+//   contador = 0;
+//   salida.textContent = `Salida: contador a ${contador}`;
+// });
+// Mini-reto (avanzado): Combinar evento click + array para mostrar mensajes distintos 
+// según el click.
+// Cada click muestra el siguiente mensaje de un array. 
+// Cuando llegue al final, vuelve al principio (cíclico).
+// Si reset, muestra mensaje "Salida: (aún nada)".
+
+const mensajes = [
+    "Si llegas aquí, podrías ser de 1DAM.",
+    "No vas mal, estás alcanzando cierto nivel. Pareces Arbeloa.",
+    "Uff! Esto ya es otra cosa. Flick estaría orgulloso.",
+    "Te has subido al gran FUNESBUQUE."
+];
