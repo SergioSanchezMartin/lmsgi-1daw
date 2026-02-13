@@ -10,6 +10,8 @@ const pantalla = document.getElementById("pantalla");                   //Pantal
 // const botonesNumeros = document.getElementsByClassName("numero");
 // const botonesNumeros = Array.from(document.querySelectorAll(".numero"));     //Convierto el NodeList en Array
 const botonesNumeros = [...document.querySelectorAll(".numero")];               //Convierto el NodeList en Array
+const botonesOperacion = [...document.querySelectorAll(".operacion")]           
+const botonIgual = document.getElementById("igual");
 
 // Manejar eventos de click
 // for (let i = 0; i < botones.length; i++) {
@@ -23,6 +25,18 @@ botonesNumeros.forEach(boton => {
     boton.addEventListener("click", () => {
         mostrarNumeroPantalla(boton.textContent);
     });
+});
+
+// Conectar los botones con el evento click
+botonesOperacion.forEach(boton => {
+    boton.addEventListener("click", () => {
+        manejarOperador(boton.textContent);
+    });
+});
+
+// Manejo el evento del botón =
+botonIgual.addEventListener("click", () => {
+    calcularOperacion();
 });
 
 
@@ -120,11 +134,14 @@ function mostrarPuntoPantalla() {
  *
  * - Se guarda la operación matemática seleccionada para luego aplicarla.
  * - Se guarda el número que había escrito en la pantalla.
- * - Se resetea la pantalla volviendo a poner el número a 0.
+ * - Se resetea el valor actual y la pantalla está a la espera de introducir nuevo número.
  *
  */
 function manejarOperador(operador) { 
-
+    operadorActual = operador;
+    valorAnterior = valorActual;
+    valorActual = "0";
+    resultadoMostrado = false;
 }
 
 /**
@@ -135,7 +152,50 @@ function manejarOperador(operador) {
  *
  */
 function calcularOperacion() { 
+    if (operadorActual === null || valorAnterior === null) return;
 
+    let num1 = parseFloat(valorAnterior);
+    let num2 = parseFloat(valorActual);
+    let resultado;
+
+    // Obtener clases CSS
+    // const classPantalla = pantalla.className.split(" ");   // ["pantalla", "color-normal"]
+    switch (operadorActual) {
+        case "+":
+            resultado = num1 + num2;
+            // classPantalla[1] = "color-suma";
+            pantalla.classList.replace(pantalla.classList.item(1),"color-suma");
+            break;
+        case "-":
+            resultado = num1 - num2;
+            // classPantalla[1] = "color-resta";
+            pantalla.classList.replace(pantalla.classList.item(1),"color-resta");
+            break;
+        case "x":
+            resultado = num1 * num2;
+            // classPantalla[1] = "color-multiplicacion";
+            
+            pantalla.classList.replace(pantalla.classList.item(1),"color-multiplicacion");
+            break;
+        case "/":
+            if (num2 === 0) {
+                valorActual = "Error";
+                // classPantalla[1] = "color-error";
+                // pantalla.className = classPantalla.join(" ");
+                pantalla.classList.replace(pantalla.classList.item(1),"color-error");
+                actualizarPantalla();
+                return;
+            }
+            resultado = num1 / num2;
+            // classPantalla[1] = "color-division";
+            pantalla.classList.replace(pantalla.classList.item(1),"color-division");
+            break;
+    }
+    valorActual = resultado.toString();
+    resultadoMostrado = true;
+    // TODO: Aplicar color resultado
+    // pantalla.className = classPantalla.join(" ");          // "pantalla color-X"
+    actualizarPantalla();
 }
 
 /**
