@@ -1,6 +1,6 @@
 const texto = '{"nombre":"Ana","edad":30}';     //Un string que contiene un JSON
 
-// Texto JSON ↔ objeto JS:
+// Texto JSON ↔ objeto JS: parsear
 const persona = JSON.parse(texto);
 
 
@@ -10,4 +10,6 @@ const alumno = {
     edad: 20,
     repetidor: false
 };
+
 const textoJSON = JSON.stringify(alumno);
+console.log(textoJSON);
