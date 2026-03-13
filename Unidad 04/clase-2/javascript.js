@@ -9,7 +9,7 @@ btnCargar.addEventListener("click", () => {
     lista.innerHTML = "";
 
     // 2) Lanzamos la petición HTTP: fetch devuelve una Promise<Response>
-    fetch("https://jsonplaceholder.typicode.com/uusers")
+    fetch("https://jsonplaceholder.typicode.com/users")
         .then(response => {
             // console.log(response);
             // 3) Proceso la respuesta y comprobamos si es correcta
